@@ -23,7 +23,7 @@ cmp.setup {
     { name = 'rime', 
       option = {
         shared_data_dir = '/usr/share/rime-data',
-        user_data_dir = getenv('HOME') .. '/.local/share/cmp-rime',
+        user_data_dir = vim.fn.getenv('HOME') .. '/.local/share/cmp-rime',
         max_candidates = 10 -- 设置过高会影响补全速度。
       } 
     }
