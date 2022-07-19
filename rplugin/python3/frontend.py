@@ -17,9 +17,10 @@ class Frontend:
     @pynvim.function('RimeGetCandidatesFromKeys')
     def get_candidates_from_keys(self, args):
         keys = args[0]
-        cursor = args[1]
-        context_id = args[2]
-        candidates = rime.get_candidates_from_keys(args[0])
+        max_candidates = args[1]
+        cursor = args[2]
+        context_id = args[3]
+        candidates = rime.get_candidates_from_keys(keys, max_candidates)
         if candidates is None:
             self.mod._callback(context_id, None)
         else:
