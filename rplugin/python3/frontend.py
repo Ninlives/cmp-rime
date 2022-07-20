@@ -29,7 +29,7 @@ class Frontend:
                 item = {
                     'label': candidate['text'],
                     'filterText': keys,
-                    'sortText': f"{keys}{candidate['order']:08d}",
+                    'sortText': f"{candidate['order']:08d}",
                     'kind': 1,
                     'textEdit': {
                         'newText': candidate['text'],
